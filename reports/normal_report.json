@@ -1,0 +1,21 @@
+{
+  "scenario": "normal",
+  "source": "simulate",
+  "sample_count": 4,
+  "start_timestamp": 1782681007.383146,
+  "end_timestamp": 1782681008.8835332,
+  "duration_s": 1.5,
+  "min_battery_percent": 98.7,
+  "min_battery_voltage": 25.12,
+  "max_current_draw_a": 15.3,
+  "max_altitude_m": 16.98,
+  "min_rangefinder_distance_m": 3.5,
+  "gps_loss_samples": 0,
+  "armed_samples": 1,
+  "warning_counts": {},
+  "first_warning_timestamp": null,
+  "final_safety_status": "NOMINAL",
+  "recommended_actions": [
+    "No warnings detected. Continue with normal post-flight inspection and log review."
+  ]
+}

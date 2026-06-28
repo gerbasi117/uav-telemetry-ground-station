@@ -1,0 +1,28 @@
+{
+  "scenario": "mixed_faults",
+  "source": "simulate",
+  "sample_count": 6,
+  "start_timestamp": 1782681011.465939,
+  "end_timestamp": 1782681013.966919,
+  "duration_s": 2.501,
+  "min_battery_percent": 97.9,
+  "min_battery_voltage": 25.07,
+  "max_current_draw_a": 72.0,
+  "max_altitude_m": 18.24,
+  "min_rangefinder_distance_m": 3.5,
+  "gps_loss_samples": 2,
+  "armed_samples": 3,
+  "warning_counts": {
+    "ARMED_WITH_BAD_GPS": 1,
+    "GPS_LOST": 2,
+    "HIGH_CURRENT_DRAW": 2,
+    "LOW_SATELLITE_COUNT": 4
+  },
+  "first_warning_timestamp": 1782681011.465939,
+  "final_safety_status": "UNSAFE",
+  "recommended_actions": [
+    "Verify GPS placement, antenna visibility, wiring, and pre-flight GPS lock requirements.",
+    "Review arming checks and block autonomous/GPS-dependent modes until GPS health is acceptable.",
+    "Inspect propulsion load, prop selection, motor/ESC behavior, wiring resistance, and battery sag."
+  ]
+}

@@ -84,3 +84,34 @@ python -m unittest discover -s tests
 - Built a Python UAV telemetry ground station for monitoring GPS, altitude, battery, current draw, flight mode, arming state, rangefinder data, and communication health.
 - Implemented repeatable fault scenarios and warning-state logic for low battery, GPS loss, high current draw, telemetry timeout, unsafe arming state, sensor faults, low link quality, and rangefinder proximity alerts.
 - Added flight-log replay and structured CSV logging to support diagnostics, field testing, and future MAVLink/PX4 integration.
+
+## Flight summary reports
+
+The project can generate JSON and Markdown post-run reports for simulated or replayed telemetry. This makes the project more realistic for UAV/robotics integration work because operators and engineers need concise post-test summaries, warning counts, and recommended follow-up actions.
+
+Example:
+
+```bash
+python3 src/main.py \
+  --mode simulate \
+  --scenario mixed_faults \
+  --duration 10 \
+  --rate 2 \
+  --no-dashboard \
+  --log logs/mixed_faults.csv \
+  --report reports/mixed_faults_report.json \
+  --report-md reports/mixed_faults_report.md
+```
+
+The report includes:
+
+- Sample count and duration
+- Minimum battery percentage/voltage
+- Maximum current draw
+- Maximum altitude
+- Minimum rangefinder distance
+- GPS-loss samples
+- Armed samples
+- Warning counts
+- Final safety status
+- Recommended follow-up actions

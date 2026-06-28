@@ -1,0 +1,26 @@
+{
+  "scenario": "unsafe_armed",
+  "source": "simulate",
+  "sample_count": 4,
+  "start_timestamp": 1782681009.42511,
+  "end_timestamp": 1782681010.9255416,
+  "duration_s": 1.5,
+  "min_battery_percent": 98.7,
+  "min_battery_voltage": 25.12,
+  "max_current_draw_a": 15.3,
+  "max_altitude_m": 16.98,
+  "min_rangefinder_distance_m": 3.5,
+  "gps_loss_samples": 4,
+  "armed_samples": 4,
+  "warning_counts": {
+    "ARMED_WITH_BAD_GPS": 4,
+    "GPS_LOST": 4,
+    "LOW_SATELLITE_COUNT": 4
+  },
+  "first_warning_timestamp": 1782681009.42511,
+  "final_safety_status": "UNSAFE",
+  "recommended_actions": [
+    "Verify GPS placement, antenna visibility, wiring, and pre-flight GPS lock requirements.",
+    "Review arming checks and block autonomous/GPS-dependent modes until GPS health is acceptable."
+  ]
+}

@@ -37,3 +37,21 @@ python src/main.py --mode simulate --scenario mixed_faults --duration 10 --rate 
 ```
 
 Expected output rotates through GPS, current, link, rangefinder, and sensor warnings.
+
+## Report generation
+
+```bash
+python3 src/main.py --mode simulate --scenario mixed_faults --duration 8 --rate 2 --no-dashboard --log logs/mixed_faults.csv --report reports/mixed_faults_report.json --report-md reports/mixed_faults_report.md
+```
+
+Expected final line:
+
+```text
+Flight summary: samples=16 status=UNSAFE warnings={...}
+```
+
+Open the generated Markdown report:
+
+```bash
+less reports/mixed_faults_report.md
+```
