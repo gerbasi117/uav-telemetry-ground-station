@@ -115,3 +115,33 @@ The report includes:
 - Warning counts
 - Final safety status
 - Recommended follow-up actions
+
+## Portfolio-ready demo workflow
+
+Generate demo terminal output, logs, and reports:
+
+```bash
+bash scripts/generate_demo_artifacts.sh
+```
+
+Review key artifacts:
+
+```bash
+less demo/mixed_faults_terminal_output.txt
+less reports/demo_mixed_faults.md
+cat reports/demo_mixed_faults.json
+```
+
+Run all tests:
+
+```bash
+python3 -m unittest discover -s tests
+```
+
+## Architecture and interview notes
+
+- [Architecture](docs/architecture.md)
+- [Testing strategy](docs/testing-strategy.md)
+- [MAVLink/PX4/ArduPilot roadmap](docs/mavlink-roadmap.md)
+- [Interview walkthrough](docs/interview-walkthrough.md)
+- [Resume bullets](docs/resume-bullets.md)

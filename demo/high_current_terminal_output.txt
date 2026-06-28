@@ -1,0 +1,11 @@
+mode=LOITER    armed=False alt= 15.0m batt=100.0% gps=3D/14 current= 72.0A link= 95.0% warnings=['HIGH_CURRENT_DRAW']
+mode=LOITER    armed=False alt= 15.7m batt= 99.6% gps=3D/14 current= 72.0A link= 95.0% warnings=['HIGH_CURRENT_DRAW']
+mode=LOITER    armed=False alt= 16.3m batt= 99.1% gps=3D/14 current= 72.0A link= 95.0% warnings=['HIGH_CURRENT_DRAW']
+mode=LOITER    armed=True  alt= 17.0m batt= 98.7% gps=3D/14 current= 72.0A link= 95.0% warnings=['HIGH_CURRENT_DRAW']
+mode=LOITER    armed=True  alt= 17.6m batt= 98.3% gps=3D/14 current= 72.0A link= 95.0% warnings=['HIGH_CURRENT_DRAW']
+mode=LOITER    armed=True  alt= 18.2m batt= 97.9% gps=3D/14 current= 72.0A link= 95.0% warnings=['HIGH_CURRENT_DRAW']
+mode=LOITER    armed=True  alt= 18.8m batt= 97.4% gps=3D/14 current= 72.0A link= 95.0% warnings=['HIGH_CURRENT_DRAW']
+mode=LOITER    armed=True  alt= 19.4m batt= 97.0% gps=3D/14 current= 72.0A link= 95.0% warnings=['HIGH_CURRENT_DRAW']
+JSON report written: reports/demo_high_current.json
+Markdown report written: reports/demo_high_current.md
+Flight summary: samples=8 status=UNSAFE warnings={'HIGH_CURRENT_DRAW': 8}

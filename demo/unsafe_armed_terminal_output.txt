@@ -1,0 +1,11 @@
+mode=ALT_HOLD  armed=True  alt= 15.0m batt=100.0% gps=NO_FIX/3 current= 12.0A link= 95.0% warnings=['GPS_LOST', 'LOW_SATELLITE_COUNT', 'ARMED_WITH_BAD_GPS']
+mode=ALT_HOLD  armed=True  alt= 15.7m batt= 99.6% gps=NO_FIX/3 current= 13.1A link= 95.0% warnings=['GPS_LOST', 'LOW_SATELLITE_COUNT', 'ARMED_WITH_BAD_GPS']
+mode=ALT_HOLD  armed=True  alt= 16.3m batt= 99.1% gps=NO_FIX/3 current= 14.3A link= 95.0% warnings=['GPS_LOST', 'LOW_SATELLITE_COUNT', 'ARMED_WITH_BAD_GPS']
+mode=ALT_HOLD  armed=True  alt= 17.0m batt= 98.7% gps=NO_FIX/3 current= 15.3A link= 95.0% warnings=['GPS_LOST', 'LOW_SATELLITE_COUNT', 'ARMED_WITH_BAD_GPS']
+mode=ALT_HOLD  armed=True  alt= 17.6m batt= 98.3% gps=NO_FIX/3 current= 16.3A link= 95.0% warnings=['GPS_LOST', 'LOW_SATELLITE_COUNT', 'ARMED_WITH_BAD_GPS']
+mode=ALT_HOLD  armed=True  alt= 18.2m batt= 97.9% gps=NO_FIX/3 current= 17.2A link= 95.0% warnings=['GPS_LOST', 'LOW_SATELLITE_COUNT', 'ARMED_WITH_BAD_GPS']
+mode=ALT_HOLD  armed=True  alt= 18.8m batt= 97.4% gps=NO_FIX/3 current= 18.0A link= 95.0% warnings=['GPS_LOST', 'LOW_SATELLITE_COUNT', 'ARMED_WITH_BAD_GPS']
+mode=ALT_HOLD  armed=True  alt= 19.4m batt= 97.0% gps=NO_FIX/3 current= 18.7A link= 95.0% warnings=['GPS_LOST', 'LOW_SATELLITE_COUNT', 'ARMED_WITH_BAD_GPS']
+JSON report written: reports/demo_unsafe_armed.json
+Markdown report written: reports/demo_unsafe_armed.md
+Flight summary: samples=8 status=UNSAFE warnings={'ARMED_WITH_BAD_GPS': 8, 'GPS_LOST': 8, 'LOW_SATELLITE_COUNT': 8}
