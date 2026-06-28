@@ -6,13 +6,14 @@ from pathlib import Path
 
 from dashboard import render_dashboard
 from logger import CsvTelemetryLogger, replay_csv, replay_jsonl
-from telemetry_generator import TelemetryGenerator
+from telemetry_generator import SCENARIOS, TelemetryGenerator
 from warning_engine import WarningEngine
 
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="UAV telemetry ground station MVP")
     parser.add_argument("--mode", choices=["simulate", "replay"], default="simulate")
+    parser.add_argument("--scenario", choices=sorted(SCENARIOS), default="normal", help="Simulation warning scenario")
     parser.add_argument("--duration", type=float, default=60.0, help="Simulation duration in seconds")
     parser.add_argument("--rate", type=float, default=2.0, help="Frames per second")
     parser.add_argument("--log", type=str, default="", help="Optional CSV log output path")
@@ -27,7 +28,7 @@ def main() -> None:
     logger = CsvTelemetryLogger(args.log) if args.log else None
 
     if args.mode == "simulate":
-        frames = TelemetryGenerator().frames(duration_s=args.duration, rate_hz=args.rate)
+        frames = TelemetryGenerator(scenario=args.scenario).frames(duration_s=args.duration, rate_hz=args.rate)
     else:
         replay_path = Path(args.replay)
         if replay_path.suffix.lower() == ".jsonl":
@@ -42,7 +43,12 @@ def main() -> None:
                 logger.write(frame)
 
             if args.no_dashboard:
-                print(f"{frame.flight_mode} armed={frame.armed} alt={frame.altitude_m:.1f}m batt={frame.battery_percent:.1f}% warnings={warnings or ['None']}")
+                print(
+                    f"mode={frame.flight_mode:<9} armed={str(frame.armed):<5} "
+                    f"alt={frame.altitude_m:>5.1f}m batt={frame.battery_percent:>5.1f}% "
+                    f"gps={frame.gps_fix}/{frame.satellite_count} current={frame.current_draw_a:>5.1f}A "
+                    f"link={frame.link_quality:>5.1f}% warnings={warnings or ['None']}"
+                )
             else:
                 render_dashboard(frame, warnings)
 

@@ -55,3 +55,31 @@ class WarningEngineTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+class ScenarioGeneratorTests(unittest.TestCase):
+    def test_unsafe_armed_scenario_generates_bad_gps_warning(self):
+        from telemetry_generator import TelemetryGenerator
+        frame = next(TelemetryGenerator(scenario="unsafe_armed").frames(duration_s=0.1, rate_hz=1))
+        warnings = WarningEngine().evaluate(frame, now=frame.timestamp)
+        self.assertIn("GPS_LOST", warnings)
+        self.assertIn("ARMED_WITH_BAD_GPS", warnings)
+
+    def test_high_current_scenario(self):
+        from telemetry_generator import TelemetryGenerator
+        frame = next(TelemetryGenerator(scenario="high_current").frames(duration_s=0.1, rate_hz=1))
+        warnings = WarningEngine().evaluate(frame, now=frame.timestamp)
+        self.assertIn("HIGH_CURRENT_DRAW", warnings)
+
+class ScenarioGeneratorTests(unittest.TestCase):
+    def test_unsafe_armed_scenario_generates_bad_gps_warning(self):
+        from telemetry_generator import TelemetryGenerator
+        frame = next(TelemetryGenerator(scenario="unsafe_armed").frames(duration_s=0.1, rate_hz=1))
+        warnings = WarningEngine().evaluate(frame, now=frame.timestamp)
+        self.assertIn("GPS_LOST", warnings)
+        self.assertIn("ARMED_WITH_BAD_GPS", warnings)
+
+    def test_high_current_scenario(self):
+        from telemetry_generator import TelemetryGenerator
+        frame = next(TelemetryGenerator(scenario="high_current").frames(duration_s=0.1, rate_hz=1))
+        warnings = WarningEngine().evaluate(frame, now=frame.timestamp)
+        self.assertIn("HIGH_CURRENT_DRAW", warnings)
