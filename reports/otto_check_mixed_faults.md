@@ -7,7 +7,7 @@
 ## Summary
 
 - Samples: 6
-- Duration: 2.501 seconds
+- Duration: 2.505 seconds
 - Minimum battery: 97.9% / 25.07 V
 - Maximum current draw: 72.0 A
 - Maximum altitude: 18.24 m

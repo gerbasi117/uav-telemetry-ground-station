@@ -2,8 +2,8 @@
   "scenario": "high_current",
   "source": "simulate",
   "sample_count": 8,
-  "start_timestamp": 1782686094.271486,
-  "end_timestamp": 1782686097.7728791,
+  "start_timestamp": 1782686805.6422067,
+  "end_timestamp": 1782686809.1435623,
   "duration_s": 3.501,
   "min_battery_percent": 97.0,
   "min_battery_voltage": 25.02,
@@ -15,7 +15,7 @@
   "warning_counts": {
     "HIGH_CURRENT_DRAW": 8
   },
-  "first_warning_timestamp": 1782686094.271486,
+  "first_warning_timestamp": 1782686805.6422067,
   "final_safety_status": "UNSAFE",
   "recommended_actions": [
     "Inspect propulsion load, prop selection, motor/ESC behavior, wiring resistance, and battery sag."

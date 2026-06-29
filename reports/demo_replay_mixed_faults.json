@@ -2,8 +2,8 @@
   "scenario": "demo_mixed_faults.csv",
   "source": "replay",
   "sample_count": 10,
-  "start_timestamp": 1782686098.3127143,
-  "end_timestamp": 1782686102.8141892,
+  "start_timestamp": 1782686809.682826,
+  "end_timestamp": 1782686814.184006,
   "duration_s": 4.501,
   "min_battery_percent": 96.2,
   "min_battery_voltage": 24.96,
@@ -20,7 +20,7 @@
     "LOW_SATELLITE_COUNT": 6,
     "RANGEFINDER_TOO_CLOSE": 2
   },
-  "first_warning_timestamp": 1782686098.3127143,
+  "first_warning_timestamp": 1782686809.682826,
   "final_safety_status": "UNSAFE",
   "recommended_actions": [
     "Verify GPS placement, antenna visibility, wiring, and pre-flight GPS lock requirements.",
